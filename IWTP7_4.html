@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<HTML LANG="fr">
+    <HEAD>
+        <META CHARSET="UTF-8">
+        <TITLE>TP n°7 - Q4</TITLE>
+        <LINK HREF="style.css" REL="stylesheet" TYPE="text/css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </HEAD>
+    
+    <BODY>
+  		<div class="pizzeria-banner">
+            <h1>Pizzeria Capitaine Calzone &#x1F355;</h1>
+        </div>
+        
+        <div class="form-section">
+            <h1>Création de votre commande</h1>
+        </div>
+        
+        <form id="formulaire">
+            <div class="form-section-pizza">
+                <h2>Choix de Pizza (3€ l'unité)</h2>
+            <div class="espacement">
+                <label for="pizza1">
+                    <input type="radio" name='pizza' value="Raclette" id="pizza1">
+                    <img src="images/raclette.jpg" alt="Raclette">
+                    <p>Raclette</p>
+                </label>
+            </div>
+            
+            <div class="espacement">
+                <label for="pizza2">
+                    <input type="radio" name='pizza' value="Pepperoni" id="pizza2">
+                    <img src="images/pepperoni.jpg" alt="Pepperoni">
+                    <p>Pepperoni</p>
+                </label>
+            </div>
+            
+            <div class="espacement">
+                <label for="pizza3">
+                    <input type="radio" name='pizza' value="Chèvre Miel" id="pizza3">
+                    <img src="images/chevre_miel.jpg" alt="Chèvre Miel">
+                    <p>Chèvre Miel</p>
+                </label>
+            </div>
+            
+            <h2>Quantité de Pizzas</h2>
+            <input type="number" name="quantitePizza" id="quantitePizza" min="0" placeholder="Quantité de pizzas">
+            
+            <h2>Suppléments</h2>
+            <input type="checkbox" name="huile" id="huile"> Huile<br>
+            </div>
+
+            <div class="form-section-boisson">
+                <h2>Choix de Boisson (2€ l'unité)</h2>
+                
+                <div class="espacement">
+                    <label for="boisson1">
+                        <input type="radio" name='boisson' value="Coca-Cola" id="boisson1"> Coca-Cola
+                    </label>
+                </div>
+                
+                <div class="espacement">
+                    <label for="boisson2">
+                        <input type="radio" name='boisson' value="Fanta Orange" id="boisson2"> Fanta Orange
+                    </label>
+                </div>
+                
+                <div class="espacement">
+                    <label for="boisson3">
+                        <input type="radio" name='boisson' value="Sprite" id="boisson3"> Sprite
+                    </label>
+                </div>
+            
+                <div class="espacement">
+                    <label for="boisson4">
+                        <input type="radio" name='boisson' value="Lipton Ice-Tea" id="boisson4"> Lipton Ice-Tea
+                    </label>
+                </div>
+        
+                <h2>Quantité de Boissons</h2>
+                <input type="number" name="quantiteBoisson" id="quantiteBoisson" min="0" placeholder="Quantité de boissons">
+            </div>
+            
+            <div class="form-section">
+                <h2>Commentaires</h2>
+                <textarea rows="4" cols="50" id="commentaires" placeholder="Indiquez des commentaires (par exemple, sans olive)"></textarea>
+            </div>
+            
+            <div class="form-section-coordonnees">
+                <h2>Coordonnées</h2>
+                <input type="text" name="nom" id="nom" pattern="[A-Za-z]+" placeholder="Nom" required>
+            
+                <input type="tel" name="telephone" id="telephone" pattern="[0-9]{10}" placeholder="Téléphone" required>
+            
+                <input type="text" name="adresse" id="adresse" placeholder="Adresse" required>
+                
+                <input type="email" name="email" id="email" placeholder="Email"><br><br>
+            </div>
+            
+            <button type="button" id="envoi" onclick="validate()">Envoyer</button><br>
+        </form>
+        
+        <script src="script.js"></script>
+    </BODY>
+</HTML>
